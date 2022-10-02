@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "phaser": "^3.55.2"
+    "ably": "^1.2.29",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "phaser": "^3.55.2",
+    "socket.io": "^4.5.2"
   }
 }

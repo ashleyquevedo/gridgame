@@ -7,6 +7,7 @@ body {
     rgba(178, 227, 193, 1) 91%
   ); */
   background: #f3ecdf;
+  /* background: #ccc0b6; */
   display: flex;
   min-height: 100vh;
   min-width: 100vw;
