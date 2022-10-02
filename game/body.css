@@ -1,0 +1,19 @@
+body {
+  /* background: linear-gradient(
+    45deg,
+    rgba(235, 207, 149, 1) 17%,
+    rgba(236, 237, 153, 1) 43%,
+    rgba(202, 241, 189, 1) 62%,
+    rgba(178, 227, 193, 1) 91%
+  ); */
+  background: #f3ecdf;
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+#phaser-container {
+} */
