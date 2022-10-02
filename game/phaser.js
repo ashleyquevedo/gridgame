@@ -1,6 +1,9 @@
+import diceRoll from "./diceRoll.js";
+import getCirclePositions from "./circlePositions.js";
+
 let spaceBar;
-let currShape;
-let highestZVal = 10;
+let fKey;
+let gameStarted = false;
 
 var config = {
   type: Phaser.AUTO,
@@ -153,26 +156,18 @@ function create() {
     (x) => x instanceof Phaser.GameObjects.Sprite
   );
 
-  // text
-
-  // this.add.text(0, 0, "Hello World", {
-  //   fontFamily: "Helvetica, Arial, sans-serif",
-  // });
-
   allSprites.forEach((sprite) => (sprite.alpha = 0.65));
   allSprites.forEach((sprite) => this.input.setDraggable([sprite], true));
 
-  // this.input.setDraggable(
-  //   [threeLine, square, twoLine, bigSquare, zigzag, tee, fourLine, ell, corner],
-  //   true
-  // );
-
+  // click and drag functionality
   this.input.on("drag", function (pointer, gameObject, dragX, dragY) {
     gameObject.setOrigin(0, 0);
     gameObject.x = Phaser.Math.Snap.To(dragX, 50);
     gameObject.y = Phaser.Math.Snap.To(dragY, 50);
   });
+  this.input.dragDistanceThreshold = 0;
 
+  // rotate on right click functionality
   this.input.mouse.disableContextMenu();
 
   allSprites.forEach(async (sprite) =>
@@ -183,14 +178,64 @@ function create() {
     })
   );
 
-  spaceBar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+  //   allSprites.forEach(async (sprite) =>
+  //   sprite.on("pointerup", function (pointer) {
+  //     if (pointer.rightButtonReleased()) {
+  //       this.setAngle((this.angle += 90));
+  //     }
+  //   })
+  // );
 
+  // flip on space-click or f-click functionality
+  spaceBar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+  fKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
+
+  // to do: correct flipping and investigate lag after flipping
   allSprites.forEach(async (sprite) =>
     sprite.on("pointerdown", function (pointer) {
-      if (spaceBar.isDown) {
+      if (spaceBar.isDown || fKey.isDown) {
+        console.log(this.angle);
         this.flipY = !this.flipY;
+        // this.flipX = !this.flipX;
       }
     })
+  );
+
+  // text
+
+  let addCircles = this.add.text(570, 50, "Start", {
+    fontFamily: "Helvetica, Arial, sans-serif",
+    color: 0x888888,
+    fontSize: 30,
+  });
+
+  addCircles.setInteractive();
+
+  // setting up circle graphics
+  let graphics = this.add.graphics({ fillStyle: { color: 0x005500 } });
+  // graphics.lineStyle(2, 0x000000, 1);
+  graphics.fillStyle(0x274251, 1);
+  const radius = 22;
+
+  // generate and render circle positions;
+  addCircles.on(
+    "pointerup",
+    function () {
+      if (!gameStarted) {
+        addCircles.text = "Reset!";
+        let roll = diceRoll();
+        let circles1 = getCirclePositions(gridOne.x, gridOne.y, 50, roll);
+        let circles2 = getCirclePositions(gridTwo.x, gridTwo.y, 50, roll);
+        circles1
+          .concat(circles2)
+          .forEach((pos) => graphics.fillCircle(pos.x, pos.y, radius));
+        gameStarted = true;
+      } else {
+        gameStarted = false;
+        this.scene.restart();
+      }
+    },
+    this
   );
 }
 
