@@ -4,7 +4,7 @@ const http = require("http");
 const app = express();
 const server = http.createServer(app);
 // const server = require("http").Server(app);
-let ellInfo = {};
+let port = 8080;
 
 app.use(express.static("public"));
 
@@ -15,7 +15,8 @@ app.get("/", (req, res) => {
 const io = require("socket.io");
 const ioServer = new io.Server(server);
 
-console.log("Listening on port " + process.env.PORT);
+// console.log("Listening on port " + process.env.PORT);
+console.log("Listening on port " + port);
 
 ioServer.on("connection", function (socket) {
   console.log("a user connected");
@@ -33,4 +34,5 @@ ioServer.on("connection", function (socket) {
   });
 });
 
-server.listen(process.env.PORT);
+// server.listen(process.env.PORT);
+server.listen(port);
