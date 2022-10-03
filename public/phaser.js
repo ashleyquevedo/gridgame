@@ -34,7 +34,7 @@ function preload() {
 }
 
 function create() {
-  this.socket = io("localhost:8080", { autoConnect: false });
+  this.socket = io();
   // io().on("connect", () => {
   //   console.log("Connected!");
   // });
