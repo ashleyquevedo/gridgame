@@ -1,8 +1,8 @@
 {
   "name": "gridgame",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "An implementation of the game Genius Square in the Phaser 3 game engine. Includes a multiplayer proof of concept utilizing Socket.io.",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ably": "^1.2.29",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "phaser": "^3.55.2",
