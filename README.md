@@ -45,4 +45,4 @@ Pending...
 
 ## Next Steps:
 
-To continue my exploration of Socket.io, I would like to implement a game lobby/room system in preparation for deployment of the game's multiplayer version. I would also like ot implement a timer to establish a win condition for the fastest player. There are also a few refinements to the tile-flipping functionality I would like to work on.
+To continue my exploration of Socket.io, I would like to implement a game lobby/room system in preparation for deployment of the game's multiplayer version. I would also like to implement a timer to establish a win condition for the fastest player. There are also a few refinements to the tile-flipping functionality I would like to work on.
