@@ -19,10 +19,6 @@ node server.js
 
 Files also include separate game and HTML files to explore the single-player version!
 
-## Next Steps:
-
-To continue my exploration of Socket.io, I would like to implement a game lobby/room system in preparation for deployment of the game's multiplayer version. I would also like ot implement a timer to establish a win condition for the fastest player. There are also a few refinements to the tile-flipping functionality I would like to work on.
-
 ## Multiplayer Images:
 
 ### Multiplayer functionality proof-of-concept (using Socket.io!)
@@ -46,3 +42,7 @@ Pending...
 ### Game completed example:
 
 ![Single-player-completed](/public/readmeimg/singleplayercomplete.png "Single-player completed")
+
+## Next Steps:
+
+To continue my exploration of Socket.io, I would like to implement a game lobby/room system in preparation for deployment of the game's multiplayer version. I would also like ot implement a timer to establish a win condition for the fastest player. There are also a few refinements to the tile-flipping functionality I would like to work on.
