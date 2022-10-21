@@ -19,11 +19,11 @@ node server.js
 
 Files also include separate game and HTML files to explore the single-player version!
 
-## Multiplayer Images:
+## Multiplayer:
 
-### Multiplayer functionality proof-of-concept (using Socket.io!)
+### Multiplayer functionality proof-of-concept (using Socket.io!):
 
-Pending...
+[Watch on YouTube](https://www.youtube.com/watch?v=u3Iic9le888)
 
 ### Game starting state:
 
@@ -33,7 +33,11 @@ Pending...
 
 ![Multiplayer-in-progress](/public/readmeimg/multiplayerinprogress.png "Multiplayer in-progress")
 
-## Single-Player Images:
+## Single-Player:
+
+### Demo Video:
+
+[Watch on YouTube](https://www.youtube.com/watch?v=shZO2_WeyTU&t=0s)
 
 ### Game starting state:
 
