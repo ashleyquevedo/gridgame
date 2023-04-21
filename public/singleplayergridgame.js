@@ -1,5 +1,79 @@
-import diceRoll from "./diceRoll.js";
-import getCirclePositions from "./circlePositions.js";
+// import diceRoll from "./diceRoll.js";
+// import getCirclePositions from "./circlePositions.js";
+
+function diceRoll() {
+  const dice = [
+    [
+      [1, 6],
+      [1, 6],
+      [1, 6],
+      [6, 1],
+      [6, 1],
+      [6, 1],
+    ],
+    [
+      [1, 4],
+      [6, 6],
+      [3, 5],
+      [4, 6],
+      [2, 5],
+      [3, 6],
+    ],
+    [
+      [1, 3],
+      [3, 2],
+      [2, 2],
+      [2, 3],
+      [1, 2],
+      [2, 1],
+    ],
+    [
+      [1, 1],
+      [6, 3],
+      [4, 1],
+      [5, 2],
+      [4, 2],
+      [3, 1],
+    ],
+    [
+      [1, 5],
+      [5, 1],
+      [1, 5],
+      [2, 6],
+      [6, 2],
+      [6, 2],
+    ],
+    [
+      [3, 3],
+      [5, 3],
+      [4, 3],
+      [4, 4],
+      [2, 4],
+      [3, 4],
+    ],
+    [
+      [5, 4],
+      [5, 5],
+      [5, 6],
+      [6, 4],
+      [4, 5],
+      [5, 5],
+    ],
+  ];
+  return dice.map(function (die) {
+    return die[Math.floor(Math.random() * die.length)];
+  });
+}
+
+function getCirclePositions(gridOriginX, gridOriginY, cellWidth, diceRoll) {
+  return diceRoll.map(function (face) {
+    let faceX = face[0] - 1;
+    let faceY = face[1] - 1;
+    let pegX = gridOriginX + cellWidth / 2 + faceX * cellWidth;
+    let pegY = gridOriginY + cellWidth / 2 + faceY * cellWidth;
+    return new Phaser.Geom.Point(pegX, pegY);
+  });
+}
 
 let spaceBar;
 let fKey;
