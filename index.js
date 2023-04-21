@@ -5,7 +5,8 @@ const app = express();
 const server = http.createServer(app);
 let port = 8080;
 
-app.use(express.static("public"));
+// app.use(express.static("public"));
+app.use(express.static(__dirname + "/public/"));
 
 // to run multiplayer concept:
 // app.get("/multiplayerconcept", (req, res) => {
