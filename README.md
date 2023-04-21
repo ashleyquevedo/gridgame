@@ -10,11 +10,13 @@ I also used Socket.io to develop a multiplayer proof-of-concept for Grid Game th
 
 ## Starting:
 
-To run:
+[View Deployed App](https://www.gridgame.vercel.app/)
+
+or, to run locally:
 
 ```bash
 npm i
-node server.js
+node index.js
 ```
 
 Files also include separate game and HTML files to explore the multiplayer version!
