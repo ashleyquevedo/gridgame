@@ -17,7 +17,7 @@ npm i
 node server.js
 ```
 
-Files also include separate game and HTML files to explore the multiplayer version!
+Files also include separate game and HTML files to explore the multiplayer version
 
 ## Multiplayer:
 
