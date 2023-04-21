@@ -20,6 +20,10 @@ app.get("/play", (req, res) => {
   res.sendFile(__dirname + "/public/views/singleplayergridgame.html");
 });
 
+app.get("/multiplayerdemo", (req, res) => {
+  res.sendFile(__dirname + "/public/views/multiplayerdemo.html");
+});
+
 const io = require("socket.io");
 const ioServer = new io.Server(server);
 

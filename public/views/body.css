@@ -57,8 +57,9 @@ a {
   border-radius: 1rem;
 }
 
-.home-bg {
+.gradient {
   display: flex;
+  flex-direction: column;
   background: linear-gradient(
     45deg,
     rgba(255, 197, 197, 0.6) 6%,
