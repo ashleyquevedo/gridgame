@@ -7,7 +7,11 @@ body {
   align-items: center;
 }
 
-#phaser-container {
+a {
+  color: inherit;
+}
+
+/* #phaser-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +32,7 @@ body {
   min-width: 76.5rem;
   min-height: 42rem;
   border-radius: 1rem;
-}
+} */
 
 #singleplayer-container {
   display: flex;
@@ -51,4 +55,46 @@ body {
   min-width: 58rem;
   min-height: 42rem;
   border-radius: 1rem;
+}
+
+.home-bg {
+  display: flex;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 197, 197, 0.6) 6%,
+    rgba(228, 139, 88, 0.6) 16%,
+    rgba(238, 192, 133, 0.6) 26%,
+    rgba(239, 196, 136, 0.6) 36%,
+    rgba(255, 237, 191, 0.6) 46%,
+    rgba(167, 194, 162, 0.6) 56%,
+    rgba(193, 230, 248, 0.6) 66%,
+    rgba(113, 155, 182, 0.6) 76%,
+    rgba(112, 108, 157, 0.6) 86%,
+    rgba(205, 184, 221, 0.6) 96%
+  );
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.home {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 130%;
+  color: #274251;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #c9bcb1;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
+}
+
+#links {
+  display: flex;
+  justify-content: space-evenly;
 }

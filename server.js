@@ -7,8 +7,17 @@ let port = 8080;
 
 app.use(express.static("public"));
 
+// to run multiplayer concept:
+// app.get("/multiplayerconcept", (req, res) => {
+//   res.sendFile(__dirname + "/public/views/multiplayerconcept.html");
+// });
+
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/views/multiplayerconcept.html");
+  res.sendFile(__dirname + "/public/views/home.html");
+});
+
+app.get("/play", (req, res) => {
+  res.sendFile(__dirname + "/public/views/singleplayergridgame.html");
 });
 
 const io = require("socket.io");
