@@ -10,7 +10,7 @@ I also used Socket.io to develop a multiplayer proof-of-concept for Grid Game th
 
 ## Starting:
 
-[View Deployed App](https://www.gridgame.vercel.app/)
+[View Deployed App](https://gridgame.vercel.app/)
 
 or, to run locally:
 
